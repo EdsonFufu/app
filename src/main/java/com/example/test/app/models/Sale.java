@@ -19,8 +19,7 @@ public class Sale {
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 
     @Column(name = "USER_ID") private String userID;
-    @Column(name = "SERVICE_TYPE") private String dateOfBirth;
-    @Column(name = "CONTACT") private Long contactId;
+    @Column(name = "SERVICE_TYPE") private String serviceType;
     @Column(name = "DATE_CREATED") private Date date;
 
 
@@ -30,3 +29,11 @@ public class Sale {
         return new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
     }
 }
+
+/*
+{
+    "userID": "",
+    "serviceType": "Service1",
+    "date": ""
+}
+ */

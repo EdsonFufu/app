@@ -18,7 +18,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 
     @Column(name = "FULL_NAME") private String fullName;
-    @Column(name = "DATE-OF_BIRTH") private String dateOfBirth;
+    @Column(name = "DATE_OF_BIRTH") private String dateOfBirth;
     @Column(name = "CONTACT") private Long contactId;
     @Column(name = "DEPARTMENT") private Long department;
 

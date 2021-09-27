@@ -18,9 +18,9 @@ public class Subscriber {
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 
     @Column(name = "FULL_NAME") private String fullName;
-    @Column(name = "DATE-OF_BIRTH") private String dateOfBirth;
+    @Column(name = "DATE_OF_BIRTH") private String dateOfBirth;
     @Column(name = "CONTACT") private Long contactId;
-    @Column(name = "SERVICE_TYE") private String serviceType;
+    @Column(name = "SERVICE_TYPE") private String serviceType;
     @Column(name = "AGENT_CODE") private String agentCode;
 
 
@@ -30,3 +30,13 @@ public class Subscriber {
         return new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
     }
 }
+
+/*
+{
+    "fullName": "Vivian Edson",
+    "dateOfBirth": "2013-01-15",
+    "contactId": "3",
+    "serviceType": "Service1",
+    "agentCode": "1"
+}
+ */

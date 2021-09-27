@@ -19,9 +19,8 @@ public class Agent {
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 
     @Column(name = "FULL_NAME") private String fullName;
-    @Column(name = "DATE-OF_BIRTH") private String dateOfBirth;
+    @Column(name = "DATE_OF_BIRTH") private String dateOfBirth;
     @Column(name = "CONTACT") private Long contactId;
-    @Column(name = "SERVICE_TYE") private String serviceType;
     @Column(name = "COMMISSION_ACCOUNT") private String commissionAccount;
     @Column(name = "COMMISSION_AMOUNT") private String commissionAmount;
 
@@ -32,3 +31,14 @@ public class Agent {
         return new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
     }
 }
+
+
+/*
+{
+    "fullName": "Victoria Edson",
+    "dateOfBirth": "2011-03-28",
+    "contactId": 2,
+    "commissionAccount": "9011101",
+    "commissionAmount": 0
+}
+ */
